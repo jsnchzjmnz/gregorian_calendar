@@ -17,7 +17,7 @@ hacía que cada 128 años se acumulara 1 día completo. [1]
 Las diferencias antes mencionadas, hacían acarrear pequeños errores acumulados,
 que con el paso de los años, serían más notorios.
 
-# El Calendario Gregoriano
+## El Calendario Gregoriano
 
 En 1572 el vigente Papa Gregorio XIII mostró disconformidad con el calendario de
 aquella época, ya que una de las fechas más importantes para la Iglesia Católica no
@@ -114,3 +114,114 @@ una fecha dada.
 ○ Viernes : 5
 ○ Sábado : 6
 ○ Error : -1
+
+## Sobre el Diseño de las Funciones
+
+Para el desarrollo de las funciones, dado que son relativamente sencillas, no se
+requirió un diseño complejo de las mismas.
+Aún así, se consideraron algunos aspectos importantes a cumplir en cada uno de
+los segmentos de código, descritas a continuación:
+● Documentación básica para cada función: Este aspecto considera para cada
+función, incluir en un encabezado de documentación el autor de esta con su
+respectivo contacto, descripción de la función, significado de los parámetros
+de entrada, definición del valor de salida, y detalle de las restricciones en
+caso de ser requeridas.
+● Estandarización de valores de retorno: Se consideró para este caso, lo
+siguiente.
+○ En caso de que la salida esperada fuera entera, se retorna el valor
+calculado en la función en caso de que este sea válido, y se utiliza el
+valor -1 como retorno cuando se encuentra una entrada incorrecta o
+un error.
+○ En caso de que la salida requerida sea booleana, se retorna True para
+los casos en que se cumple la serie de condiciones, y False para
+aquellos casos en que no se cumple, o se genera error.
+
+## Evidencias de Pruebas Realizadas
+
+Dada la gran cantidad de posibles valores que podrían recibir las funciones como
+entrada, se decidió realizar funciones con casos de prueba para cada una de ellas.
+Para cada una, se definió una serie de casos extremos, casos promedio, propensos
+a generar error (Strings, tuplas de strings, valores negativos, valores flotantes, etc),
+además de un arreglo con los resultados esperados (oráculo).
+De esta forma se logró realizar una serie de pruebas exhaustivas, con entradas
+controladas y salidas esperadas para cada uno de los casos de prueba, para cada
+una de las funciones.
+Las funciones que se utilizaron para este fin, se encuentran en las últimas líneas del
+código fuente, claramente señaladas con un prefijo “test_” al inicio del nombre de
+cada función.
+Para garantizar un funcionamiento aceptable, en los conjuntos de pruebas por
+realizar, se consideraron valores de entrada que incluyen:
+● Valores String.
+● Tuplas de string.
+● Tuplas con valores negativos.
+● Tuplas con valores de punto flotante.
+
+## Análisis de Resultados
+
+De una ejecución a cada una de las funciones destinadas para testing, se
+obtuvieron los siguientes resultados.
+
+```
+Testing fecha_es_tupla function
+From 24 tests, 24 are correct, and 0 are incorrect.
+
+Testing bisiesto function
+From 27 tests, 27 are correct and 0 are incorrect.
+
+Testing fecha_es_valida function
+From 35 tests, 35 are correct, and 0 are incorrect
+
+Testing dia_siguiente function
+From 28 tests, 28 are correct, and 0 are incorrect
+
+Testing dias_desde_primero_enero function
+From 32 tests, 32 are correct, and 0 are incorrect
+
+Testing dia_semana function
+From 13 tests, 13 are correct, and 0 are incorrect
+
+```
+
+Tal y como se mencionó en la sección anterior, se utilizó un “oráculo” con los
+valores de entrada y el valor esperado, previamente validado.
+Cada uno de los resultados obtenidos en la ejecución de cada función, fue
+comparado con los valores indicados en el oráculo, con el fin de determinar si la
+salida de la función evaluada era correcta o no.
+Del conjunto de casos evaluados, puede notarse en la figura anterior, que no se
+reportaron resultados incorrectos para las ejecuciones.
+Con este análisis, se puede concluir que el funcionamiento de las funciones
+solicitadas, es aceptable en términos funcionales.
+
+## Referencias
+
+[1] Dominguez, M. (s.f). ​ La historia del calendario Gregoriano . ​ [online] VIX.
+Available
+at:
+https://www.vix.com/es/btg/curiosidades/3523/la-historia-del-calendario-grego
+riano [Accessed 15 Sep. 2019].
+[2] Humanoriginproject.com. (s.f). ​ The Gregorian Calendar & the Unbelievable
+Leap-Year
+Paradox ​ .
+[online]
+Available
+at:
+https://humanoriginproject.com/gregorian-calendar-leap-year/ [Accessed 15
+Sep. 2019].
+[3]
+En.wikipedia.org.
+(2019)​ .
+Computus . ​
+[online]
+Available
+https://en.wikipedia.org/wiki/Computus [Accessed 15 Sep. 2019].
+at:
+[4] Arogundade, B. (2019). ​ BEST FACTS: Where & When Was William
+Shakespeare Born? Timeline & Life . ​ [online] Arogundade.com. Available at:
+http://www.arogundade.com/where-and-when-was-was-william-shakespeare-
+born-timeline-and-life-facts-about-william-shakespeare.html [Accessed 15
+Sep. 2019].
+[5] En.wikipedia.org. (2019). ​ Miguel de Cervantes . ​ [online] Available at:
+https://en.wikipedia.org/wiki/Miguel_de_Cervantes [Accessed 15 Sep. 2019].
+[6]
+En.wikipedia.org. (2019). ​ William Shakespeare . ​ [online] Available at:
+https://en.wikipedia.org/wiki/William_Shakespeare [Accessed 15 Sep. 2019].
